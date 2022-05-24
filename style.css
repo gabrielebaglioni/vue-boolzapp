@@ -4,7 +4,17 @@
     margin: 0;
 }
 
+:root {
+    --colore-verde: #009688;
+    --colore-grigio: #DBDBD2;
+    --colore-notifiche: #8EDAFC;
+    --colore-grigio-sfondo-header-colonne: #E6DFD6;
+    --colore-sfondo-barra-messaggio: #F3EEEA;
+    --colore-hover-contatto: #F4F5F5;
+    --colore-sfondo-input-ricerca-contatto: #FAFAFA;
+}
+
 body {
     min-height: 100vh;
-    background: linear-gradient( 0deg, #dcdbd2 85%, #009688 15%);
+    background: linear-gradient( 0deg, var(--colore-grigio) 85%, var(--colore-verde) 15%);
 }
