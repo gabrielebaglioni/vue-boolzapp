@@ -1,20 +1,81 @@
+/* RESET */
+
 * {
-    box-sizing: border-box;
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
+
+
+/*CUSTOMS*/
 
 :root {
-    --colore-verde: #009688;
-    --colore-grigio: #DBDBD2;
-    --colore-notifiche: #8EDAFC;
-    --colore-grigio-sfondo-header-colonne: #E6DFD6;
-    --colore-sfondo-barra-messaggio: #F3EEEA;
-    --colore-hover-contatto: #F4F5F5;
-    --colore-sfondo-input-ricerca-contatto: #FAFAFA;
+    --colore-verde: #009485;
+    --colore-sfondo-body-grigio: #DBDBD2;
+    --colore-sfondo-colonne: #E6DFD6;
+    --white: #fff;
+    --notifiche: #8EDAFC;
 }
 
+
+/*TYPO*/
+
 body {
-    min-height: 100vh;
-    background: linear-gradient( 0deg, var(--colore-grigio) 85%, var(--colore-verde) 15%);
+    height: 100vh;
+    background: linear-gradient(var(--colore-verde) 0%, var(--colore-verde) 20%, var(--colore-sfondo-body-grigio) 20%, var(--colore-sfondo-body-grigio) 100%);
+    font-family: 'Lato', sans-serif;
+}
+
+
+/*COMMONS*/
+
+
+/*CONTAINERS*/
+
+.container {
+    width: 80%;
+    height: calc(100vh - 10%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+
+.container-top {
+    background-color: var(--colore-sfondo-body-grigio);
+    padding: 0.5em;
+}
+
+.col-left {
+    width: 30%;
+}
+
+.rigth-col {
+    width: 70%;
+}
+
+.notifiche {
+    background-color: var(--notifiche);
+    padding: 0.8em 1em;
+}
+
+.notifiche i {
+    background-color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--notifiche);
+    font-size: 1.5em;
+}
+
+.container-top:first-child {
+    border-left: 1px solid #c2bebe;
+}
+
+.container-top img,
+.notifiche i {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 }
