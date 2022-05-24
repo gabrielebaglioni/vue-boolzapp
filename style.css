@@ -34,7 +34,7 @@ body {
 
 .container {
     width: 80%;
-    height: calc(100vh - 10%);
+    height: calc(100vh - 20%);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -43,8 +43,13 @@ body {
 }
 
 .container-top {
-    background-color: var(--colore-sfondo-body-grigio);
+    background-color: var(--colore-sfondo-colonne);
     padding: 0.5em;
+}
+
+.user-img {
+    display: flex;
+    align-items: center;
 }
 
 .col-left {
@@ -57,7 +62,7 @@ body {
 
 .notifiche {
     background-color: var(--notifiche);
-    padding: 0.8em 1em;
+    padding: 0.5rem 1rem;
 }
 
 .notifiche i {
@@ -75,7 +80,32 @@ body {
 
 .container-top img,
 .notifiche i {
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
+}
+
+#decoration {
+    color: gray;
+    font-size: small;
+}
+
+.header-left {
+    width: 100%;
+    height: 50px;
+    background: var(--colore-sfondo-colonne);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+}
+
+.nav-menu li {
+    padding: 0 10px;
+    color: lightslategray
 }
