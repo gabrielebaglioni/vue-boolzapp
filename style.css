@@ -21,12 +21,10 @@
         background: linear-gradient(var(--colore-verde) 0%, var(--colore-verde) 20%, var(--colore-sfondo-body-grigio) 20%, var(--colore-sfondo-body-grigio) 100%);
         font-family: 'Lato', sans-serif;
     }
-    /*COMMONS*/
-    /*CONTAINERS*/
     
     .container {
         width: 80%;
-        height: calc(100vh - 20%);
+        height: 80vh;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -35,8 +33,9 @@
     }
     
     .container-top {
+        display: flex;
         background-color: var(--colore-sfondo-colonne);
-        padding: 0.5em;
+        height: 4rem;
     }
     
     .user-img {
@@ -46,10 +45,14 @@
     }
     
     .col-left {
+        display: flex;
+        flex-direction: column;
         width: 30%;
     }
     
     .col-right {
+        display: flex;
+        flex-direction: column;
         width: 70%;
     }
     
@@ -106,13 +109,10 @@
     }
     
     .header-left {
-        width: 100%;
-        height: 50px;
         background: var(--colore-sfondo-colonne);
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0 10px;
     }
     
     .nav-menu {
@@ -131,12 +131,10 @@
     
     .header-right {
         width: 100%;
-        height: 50px;
         background: var(--colore-sfondo-colonne);
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0 10px;
     }
     
     .search-bar {
@@ -153,6 +151,11 @@
     
     .search-bar i {
         padding: 0 12px;
+    }
+    
+    .contacts {
+        flex-grow: 1;
+        overflow-y: auto;
     }
     
     .contact {
@@ -179,11 +182,6 @@
         color: black;
     }
     
-    .contacts {
-        height: calc(100% - 150px);
-        overflow-y: auto;
-    }
-    
     .contact-img .user-img {
         width: 50px;
         height: 50px;
@@ -207,7 +205,7 @@
     
     .chat-container {
         width: 100%;
-        height: calc(100% - 80px);
+        flex-grow: 1;
         overflow-y: auto;
         background-image: url(img/mine.jpg);
     }
@@ -217,14 +215,14 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: #eaeaea;
-        padding: 5px 0;
+        background-color: var(--colore-sfondo-colonne);
     }
     
     .chat-input-bar {
         width: 90%;
         padding: 10px;
         border-radius: 5px;
+        border: none;
     }
     
     .chat-input i {
