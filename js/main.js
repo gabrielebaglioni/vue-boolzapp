@@ -163,6 +163,9 @@ const app = new Vue({
         },
         createImg(index) {
             return `img/avatar${index}.jpg`;
+        },
+        gateDate(index) {
+            return this.contacts[index].messages[this.contacts[index].messages.length - 1].date.substring(11, 16);
         }
 
     },

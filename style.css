@@ -79,15 +79,15 @@
     }
     
     .contact-img .user-img {
-        width: 40px;
-        height: 40px;
+        width: 55px;
+        height: 55px;
         border-radius: 50%;
     }
     
     .container-top img,
     .notifiche i {
-        width: 40px;
-        height: 40px;
+        width: 55px;
+        height: 55px;
         border-radius: 50%;
         margin-left: 0.5rem;
     }
@@ -161,6 +161,7 @@
     
     .search-bar i {
         padding: 0 12px;
+        font-size: 14px;
     }
     /* CONCTACS / CONTACT */
     
@@ -204,6 +205,36 @@
         overflow-y: auto;
         background-image: url(img/mine.jpg);
     }
+    
+    .row-user-msg {
+        display: flex;
+        justify-content: right;
+    }
+    
+    .box-msg {
+        display: flex;
+        width: 20rem;
+        height: 3rem;
+        padding: 10px;
+        border-radius: 10px;
+        position: relative;
+        margin: 1rem 2rem;
+    }
+    
+    .user-msg {
+        background-color: #d5f9ba;
+    }
+    
+    .recived-msg {
+        background-color: var(--white);
+    }
+    
+    .text-msg {
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .time-msg small {}
     
     .chat-input {
         width: 100%;

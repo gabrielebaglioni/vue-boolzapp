@@ -43,10 +43,13 @@
                     <span><small>Attiva notifiche desktop</small></span>
                 </div>
             </div>
-            <!-- markUp della search-bar dei contatti + ciclo for per stampare i miei obj -->
+            <!-- search-bar dei contatti + ciclo for per stampare i miei obj -->
             <div class="search-bar">
                 <i class="fa-solid fa-magnifying-glass"></i>
+
                 <input class="input-bar" type="text" placeholder="Cerca o inizia una nuova chat">
+
+
             </div>
             <div class="contacts">
                 <div class="contact" v-for="(contact, index) in contacts" @click="changeChat(index)">
@@ -56,12 +59,12 @@
                     </div>
                     <div class="contact-info">
                         <div>
-                            <!-- tamplate litteral -->
+                            <!-- baffo baffo -->
                             <h4 class="contact-name">{{contact.name}}</h4>
                             <small>Ultimo messaggio inviato</small>
                         </div>
                         <div class="timer">
-                            <small>12:00</small>
+                            <small>{{gateDate(index)}}</small>
                         </div>
                     </div>
                 </div>
@@ -73,7 +76,7 @@
                 <div class="header-right">
                     <div class="user-img">
                         <img :src="createImg(contacts[currentIndex].avatar)" alt="my avatar">
-                        <span>{{contacts[currentIndex].name}} <br><span id="decoration">ultimo acceso ieri</span></span>
+                        <span>{{contacts[currentIndex].name}} <br><span id="decoration">ultimo accesso {{gateDate(currentIndex)}}</span></span>
                     </div>
                     <!-- nav -->
                     <ul class="nav-menu">
@@ -85,10 +88,37 @@
             </div>
             <!-- inpunt della chat -->
             <div class="chat-container">
+                <div class="row-user-msg">
+                    <div class="user-msg box-msg">
+                        <p class="text-msg">hai portato il cane fuori?</p>
+                        <div class="time-msg">
+                            <small>12:00</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="row-user-msg">
+                    <div class="user-msg box-msg">
+                        <p class="text-msg">Ricordati di stendere i panni</p>
+                        <div class="time-msg">
+                            <small>12:00</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="row-recived-msg">
+                    <div class="recived-msg box-msg">
+                        <p class="text-msg">tutto fatto</p>
+                        <div class="time-msg">
+                            <small>12:00</small>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="chat-input">
                 <i class="fa-regular fa-face-smile"></i>
+
                 <input class="chat-input-bar input-bar" type="text" placeholder="Scrivi un messaggio">
+
+
                 <i class="fa-solid fa-microphone"></i>
             </div>
         </div>
