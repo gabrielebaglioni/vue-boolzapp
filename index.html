@@ -88,13 +88,9 @@
             </div>
             <!-- inpunt della chat -->
             <div class="chat-container">
-                <div class="row-user-msg" v-for="(message, index) in contacts[currentIndex].messages" :class="{'user-img' : message.status === 'sent', 'recived-msg' : message.status === 'received'}">
-                    <div class="user-msg box-msg">
-                        <p class="text-msg">{{message.message}}</p>
-                        <div class="time-msg">
-                            <small>12:00</small>
-                        </div>
-                    </div>
+                <div class="box-msg" v-for="(message, index) in contacts[currentIndex].messages" :class="{'user-msg' : message.status === 'sent', 'recived-msg' : message.status === 'received'}">
+                    <p class="text-msg">{{message.message}}</p>
+                    <small class="date">{{gateDate(index)}}</small>
                 </div>
                 <!-- <div class="row-recived-msg">
                     <div class="recived-msg box-msg">
@@ -119,3 +115,4 @@
 </body>
 
 </html>
+<!-- v-for="(message, index) in contacts[currentIndex].messages" :class="{'user-img' : message.status === 'sent', 'recived-msg' : message.status === 'received'}"> -->

@@ -200,33 +200,29 @@
     /* CHAT + INPUT CHAT */
     
     .chat-container {
+        display: flex;
         width: 100%;
         flex-grow: 1;
         overflow-y: auto;
         background-image: url(img/mine.jpg);
-    }
-    
-    .row-user-msg {
-        display: flex;
+        flex-direction: column;
     }
     
     .box-msg {
-        padding: 10px;
+        padding: 1rem;
         border-radius: 10px;
-        margin: 5px;
-        width: 40%;
+        margin: 1rem;
+        width: 50%;
         position: relative;
     }
     
     .user-msg {
-        display: flex;
         align-self: flex-end;
         background-color: #d5f9ba;
     }
     
     .recived-msg {
         background-color: var(--white);
-        align-self: flex-start;
     }
     
     .text-msg {
@@ -234,7 +230,10 @@
         justify-content: center;
     }
     
-    .time-msg small {}
+    .date {
+        display: flex;
+        justify-content: flex-end;
+    }
     
     .chat-input {
         width: 100%;
