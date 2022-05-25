@@ -176,7 +176,7 @@ const app = new Vue({
         //     this.contacts[this.currentIndex].messages.push(utenteMsg);
         addMessages() {
             let utenteMsg = {
-                date: "",
+                date: "", //this.getDate()
                 message: this.newMessage,
                 status: "sent",
             };

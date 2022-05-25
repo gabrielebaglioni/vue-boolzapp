@@ -64,7 +64,7 @@
                             <small>Ultimo messaggio inviato</small>
                         </div>
                         <div class="timer">
-                            <!-- <small>{{gateDate(index)}}</small> -->
+                            <small>{{gateDate(index)}}</small>
                         </div>
                     </div>
                 </div>
@@ -91,7 +91,7 @@
             <div class="chat-container">
                 <div class="box-msg" v-for="(message, index) in contacts[currentIndex].messages" :class="{'user-msg' : message.status === 'sent', 'recived-msg' : message.status === 'received'}">
                     <p class="text-msg">{{message.message}}</p>
-                    <!-- <small class="date">{{gateDate(index)}}</small> -->
+                    <small class="date">{{gateDate(index)}}</small>
                 </div>
             </div>
             <div class="chat-input">
@@ -110,4 +110,3 @@
 </body>
 
 </html>
-<!-- v-for="(message, index) in contacts[currentIndex].messages" :class="{'user-img' : message.status === 'sent', 'recived-msg' : message.status === 'received'}"> -->
