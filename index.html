@@ -97,7 +97,7 @@
             <div class="chat-input">
                 <i class="fa-regular fa-face-smile"></i>
                 <form @submit.prevent="addMessages()">
-                    <input class="chat-input-bar input-bar" type="text" placeholder="Scrivi un messaggio" v-model="newMessage">
+                    <input class="chat-input-bar input-bar" type="text" placeholder="Scrivi un messaggio" v-model="newMessage" required/>
                 </form>
 
 
@@ -106,6 +106,7 @@
             </div>
         </div>
     </div>
+
     <script src="js/main.js"></script>
 </body>
 
