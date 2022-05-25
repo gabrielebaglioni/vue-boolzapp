@@ -49,12 +49,14 @@
                 <input class="input-bar" type="text" placeholder="Cerca o inizia una nuova chat">
             </div>
             <div class="contacts">
-                <div class="contact" v-for="(contact,index) in contacts">
+                <div class="contact" v-for="(contact, index) in contacts" @click="changeChat(index)">
                     <div class="contact-img">
-                        <img class="user-img" :src="'img/avatar'+ contact.avatar +'.jpg'" alt="avatar_1">
+                        <!-- concatenizzazione dell'img avatar -->
+                        <img class="user-img" :src="createImg(contact.avatar)" alt="avatar_1">
                     </div>
                     <div class="contact-info">
                         <div>
+                            <!-- tamplate litteral -->
                             <h4 class="contact-name">{{contact.name}}</h4>
                             <small>Ultimo messaggio inviato</small>
                         </div>
@@ -70,8 +72,8 @@
             <div class="container-top">
                 <div class="header-right">
                     <div class="user-img">
-                        <img src="img/avatar_1.jpg" alt="my avatar">
-                        <span>Michele <br><span id="decoration">ultimo acceso ieri</span></span>
+                        <img :src="createImg(contacts[currentIndex].avatar)" alt="my avatar">
+                        <span>{{contacts[currentIndex].name}} <br><span id="decoration">ultimo acceso ieri</span></span>
                     </div>
                     <!-- nav -->
                     <ul class="nav-menu">

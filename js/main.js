@@ -153,7 +153,17 @@ const app = new Vue({
                         status: 'received'
                     }
                 ],
-            }
-        ]
-    }
-})
+            },
+        ],
+        currentIndex: 0,
+    },
+    methods: {
+        changeChat(index) {
+            this.currentIndex = index;
+        },
+        createImg(index) {
+            return `img/avatar${index}.jpg`;
+        }
+
+    },
+});
