@@ -208,25 +208,25 @@
     
     .row-user-msg {
         display: flex;
-        justify-content: right;
     }
     
     .box-msg {
-        display: flex;
-        width: 20rem;
-        height: 3rem;
         padding: 10px;
         border-radius: 10px;
+        margin: 5px;
+        width: 40%;
         position: relative;
-        margin: 1rem 2rem;
     }
     
     .user-msg {
+        display: flex;
+        align-self: flex-end;
         background-color: #d5f9ba;
     }
     
     .recived-msg {
         background-color: var(--white);
+        align-self: flex-start;
     }
     
     .text-msg {
