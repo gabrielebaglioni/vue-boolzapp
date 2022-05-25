@@ -64,7 +64,7 @@
                             <small>Ultimo messaggio inviato</small>
                         </div>
                         <div class="timer">
-                            <small>{{gateDate(index)}}</small>
+                            <!-- <small>{{gateDate(index)}}</small> -->
                         </div>
                     </div>
                 </div>
@@ -76,7 +76,8 @@
                 <div class="header-right">
                     <div class="user-img">
                         <img :src="createImg(contacts[currentIndex].avatar)" alt="my avatar">
-                        <span>{{contacts[currentIndex].name}} <br><span id="decoration">ultimo accesso {{gateDate(currentIndex)}}</span></span>
+                        <span>{{contacts[currentIndex].name}} <br>
+                            <!-- <span id="decoration">ultimo accesso {{gateDate(currentIndex)}}</span></span> -->
                     </div>
                     <!-- nav -->
                     <ul class="nav-menu">
@@ -90,21 +91,15 @@
             <div class="chat-container">
                 <div class="box-msg" v-for="(message, index) in contacts[currentIndex].messages" :class="{'user-msg' : message.status === 'sent', 'recived-msg' : message.status === 'received'}">
                     <p class="text-msg">{{message.message}}</p>
-                    <small class="date">{{gateDate(index)}}</small>
+                    <!-- <small class="date">{{gateDate(index)}}</small> -->
                 </div>
-                <!-- <div class="row-recived-msg">
-                    <div class="recived-msg box-msg">
-                        <p class="text-msg">.</p>
-                        <div class="time-msg">
-                            <small>12:00</small>
-                        </div>
-                    </div>
-                </div> -->
             </div>
             <div class="chat-input">
                 <i class="fa-regular fa-face-smile"></i>
+                <form @submit.prevent="addMessages()">
+                    <input class="chat-input-bar input-bar" type="text" placeholder="Scrivi un messaggio" v-model="newMessage">
+                </form>
 
-                <input class="chat-input-bar input-bar" type="text" placeholder="Scrivi un messaggio">
 
 
                 <i class="fa-solid fa-microphone"></i>
