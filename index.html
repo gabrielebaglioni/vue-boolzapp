@@ -54,14 +54,14 @@
             <div class="contacts">
                 <div class="contact" v-for="(contact, index) in contacts" @click="changeChat(index)">
                     <div class="contact-img">
-                        <!-- concatenizzazione dell'img avatar -->
+                        <!-- funzione img avatar -->
                         <img class="user-img" :src="createImg(contact.avatar)" alt="avatar_1">
                     </div>
                     <div class="contact-info">
                         <div>
                             <!-- baffo baffo -->
                             <h4 class="contact-name">{{contact.name}}</h4>
-                            <small>Ultimo messaggio inviato</small>
+                            <small>{{lastMessage(index)}}</small>
                         </div>
                         <div class="timer">
                             <small>{{gateDate(index)}}</small>

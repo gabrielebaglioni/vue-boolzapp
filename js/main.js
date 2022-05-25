@@ -190,6 +190,9 @@ const app = new Vue({
                 };
                 this.contacts[this.currentIndex].messages.push(receivedMsg);
             }, 1000)
+        },
+        lastMessage(index) {
+            return this.contacts[index].messages[this.contacts[index].messages.length - 1].message;
         }
 
     },
