@@ -91,7 +91,7 @@
                 </div>
             </div>
 
-            <div class="chat-container">
+            <div class="chat-container" id="chat" :class="scrolChat()">
                 <div class="box-msg" v-for="(message, index) in contacts[currentIndex].messages" :class="{'user-msg' : message.status === 'sent', 'recived-msg' : message.status === 'received'}">
                     <p class="text-msg">{{message.message}}</p>
                     <small class="date">{{printTime(message)}}</small>

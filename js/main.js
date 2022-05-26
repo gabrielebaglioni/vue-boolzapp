@@ -185,15 +185,17 @@ const app = new Vue({
             };
             this.contacts[this.currentIndex].messages.push(utenteMsg);
             this.newMessage = "";
+
             setTimeout(() => {
+
                 let receivedMsg = {
                     date: nowTime,
                     message: "Okay!",
                     status: "received"
                 };
                 this.contacts[this.currentIndex].messages.push(receivedMsg);
-
             }, 1000)
+            this.scrolChat()
         },
         lastMessage(index) {
             return this.contacts[index].messages[this.contacts[index].messages.length - 1].message;
@@ -201,10 +203,10 @@ const app = new Vue({
         printTime(message) {
             return DateTime.fromFormat(message.date, "dd/MM/yyyy HH:mm:ss").toFormat('HH:mm');
         },
-        // filter(contacts) {
-
-        // },
-
+        scrolChat() {
+            var scrol = document.getElementById("chat")
+            return scrol.scrollTop = scrol.scrollHeight;
+        }
 
     },
     computed: {
