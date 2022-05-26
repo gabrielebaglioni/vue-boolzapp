@@ -1,3 +1,4 @@
+var DateTime = luxon.DateTime;
 const app = new Vue({
     el: '#app',
     data: {
@@ -157,6 +158,7 @@ const app = new Vue({
         ],
         currentIndex: 0,
         newMessage: "",
+        // localDatetime: "",
     },
     methods: {
         changeChat(index) {
@@ -165,13 +167,18 @@ const app = new Vue({
         createImg(index) {
             return `img/avatar${index}.jpg`;
         },
-        gateDate(index) {
-            console.log(index)
+        gateDateLast(index) {
+            // console.log(index)
             return this.contacts[index].messages[this.contacts[index].messages.length - 1].date.substring(11, 16);
         },
+        gateDate(contact) {
+            const mess = contact.messages[contact.messages.length - 1];
+            return DateTime.fromFormat(mess.date, "dd/MM/yyyy HH:mm:ss").toFormat('HH:mm');
+        },
         addMessages() {
+            const nowTime = DateTime.now().toFormat("dd/MM/yyyy HH:mm:ss");
             let utenteMsg = {
-                date: "", //this.getDate()
+                date: nowTime, //this.localDatetime = DateTime.local(),
                 message: this.newMessage,
                 status: "sent",
             };
@@ -179,7 +186,7 @@ const app = new Vue({
             this.newMessage = "";
             setTimeout(() => {
                 let receivedMsg = {
-                    date: "",
+                    date: nowTime,
                     message: "Okay!",
                     status: "received"
                 };
@@ -189,7 +196,11 @@ const app = new Vue({
         },
         lastMessage(index) {
             return this.contacts[index].messages[this.contacts[index].messages.length - 1].message;
-        }
+        },
+        printTime(message) {
+            return DateTime.fromFormat(message.date, "dd/MM/yyyy HH:mm:ss").toFormat('HH:mm');
+        },
+
 
     },
 });
