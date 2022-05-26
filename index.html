@@ -50,12 +50,12 @@
             <div class="search-bar">
                 <i class="fa-solid fa-magnifying-glass"></i>
 
-                <input class="input-bar" type="text" placeholder="Cerca o inizia una nuova chat">
+                <input class="input-bar" type="text" placeholder="Cerca o inizia una nuova chat" v-model="filterName">
 
 
             </div>
             <div class="contacts">
-                <div class="contact" v-for="(contact, index) in contacts" @click="changeChat(index)">
+                <div class="contact" v-for="(contact, index) in filter" @click="changeChat(index)">
                     <div class="contact-img">
                         <!-- funzione img avatar -->
                         <img class="user-img" :src="createImg(contact.avatar)" alt="avatar_1">

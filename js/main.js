@@ -159,6 +159,7 @@ const app = new Vue({
         currentIndex: 0,
         newMessage: "",
         // localDatetime: "",
+        filterName: "",
     },
     methods: {
         changeChat(index) {
@@ -200,7 +201,17 @@ const app = new Vue({
         printTime(message) {
             return DateTime.fromFormat(message.date, "dd/MM/yyyy HH:mm:ss").toFormat('HH:mm');
         },
+        // filter(contacts) {
+
+        // },
 
 
     },
+    computed: {
+        filter() {
+            return this.contacts.filter((elm) =>
+                elm.name.toLowerCase().includes(this.filterName)
+            );
+        }
+    }
 });
