@@ -166,14 +166,9 @@ const app = new Vue({
             return `img/avatar${index}.jpg`;
         },
         gateDate(index) {
+            console.log(index)
             return this.contacts[index].messages[this.contacts[index].messages.length - 1].date.substring(11, 16);
         },
-        // addMessages() {
-        //     let utenteMsg = {
-        //         message: this.newMessage,
-        //         status: "sent",
-        //     };
-        //     this.contacts[this.currentIndex].messages.push(utenteMsg);
         addMessages() {
             let utenteMsg = {
                 date: "", //this.getDate()
@@ -189,6 +184,7 @@ const app = new Vue({
                     status: "received"
                 };
                 this.contacts[this.currentIndex].messages.push(receivedMsg);
+
             }, 1000)
         },
         lastMessage(index) {
