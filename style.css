@@ -206,9 +206,11 @@
         overflow-y: auto;
         background-image: url(img/mine.jpg);
         flex-direction: column;
+        overflow-wrap: break-word;
     }
     
     .box-msg {
+        display: flex;
         padding: 1rem;
         border-radius: 10px;
         margin: 1rem;
@@ -228,6 +230,13 @@
     .text-msg {
         align-items: center;
         justify-content: center;
+        max-width: 90%;
+    }
+    
+    .box-msg small {
+        position: absolute;
+        right: .3125rem;
+        bottom: .3125rem;
     }
     
     .date {
