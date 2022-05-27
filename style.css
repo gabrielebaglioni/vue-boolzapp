@@ -162,6 +162,15 @@
     .search-bar i {
         padding: 0 12px;
         font-size: 14px;
+        color: grey;
+    }
+    
+    .search-bar input {
+        padding: 10px 20px;
+        border-radius: 10px;
+        border-width: 1px;
+        min-width: 45rem;
+        margin-right: 10px;
     }
     /* CONCTACS / CONTACT */
     

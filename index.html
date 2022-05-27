@@ -49,8 +49,10 @@
             <!-- search-bar dei contatti + ciclo for per stampare i miei obj -->
             <div class="search-bar">
                 <i class="fa-solid fa-magnifying-glass"></i>
-
-                <input class="input-bar" type="text" placeholder="Cerca o inizia una nuova chat" v-model="filterName">
+                <form @submit.prevent="">
+                    <input class="input-bar" type="text" placeholder="Cerca o inizia una nuova chat" v-model="filterName" required pattern="^\S\w*(( )+\w*)*" />
+                </form>
+                <input class="input-bar" type="text" placeholder="Cerca o inizia una nuova chat" v-model="filterName" required pattern="^\S\w*(( )+\w*)*" />
 
 
             </div>
