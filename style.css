@@ -151,12 +151,6 @@
         align-items: center;
         padding: 5px;
         background-color: #fafafa;
-        height: 40px;
-    }
-    
-    .search-bar input {
-        flex-grow: 1;
-        border: none;
     }
     
     .search-bar i {
@@ -166,11 +160,11 @@
     }
     
     .search-bar input {
-        padding: 10px 20px;
+        padding: 5px 20px;
         border-radius: 10px;
         border-width: 1px;
-        min-width: 45rem;
-        margin-right: 10px;
+        min-width: 20rem;
+        border: none;
     }
     /* CONCTACS / CONTACT */
     
