@@ -91,7 +91,7 @@
                 </div>
             </div>
 
-            <div class="chat-container" id="chat" :class="scrolChat()">
+            <div class="chat-container" id="chat">
                 <div class="box-msg" v-for="(message, index) in contacts[currentIndex].messages" :class="{'user-msg' : message.status === 'sent', 'recived-msg' : message.status === 'received'}">
                     <p class="text-msg">{{message.message}}</p>
                     <small class="date">{{printTime(message)}}</small>
@@ -100,7 +100,7 @@
             <div class="chat-input">
                 <i class="fa-regular fa-face-smile"></i>
                 <form @submit.prevent="addMessages()">
-                    <input class="chat-input-bar input-bar" type="text" placeholder="Scrivi un messaggio" v-model="newMessage" required/>
+                    <input class="chat-input-bar input-bar" type="text" placeholder="Scrivi un messaggio" v-model="newMessage" required pattern="^\S\w*(( )+\w*)*" />
                 </form>
 
 
