@@ -162,8 +162,8 @@ const app = new Vue({
         filterName: "",
     },
     methods: {
-        changeChat(index) {
-            this.currentIndex = index;
+        changeChat(user) {
+            this.currentIndex = this.contacts.indexOf(user);
         },
         createImg(index) {
             return `img/avatar${index}.jpg`;
@@ -205,13 +205,13 @@ const app = new Vue({
             return DateTime.fromFormat(message.date, "dd/MM/yyyy HH:mm:ss").toFormat('HH:mm');
         },
         scrolChat() {
-            var scrol = document.getElementById("chat")
+            let scrol = document.getElementById("chat")
             return scrol.scrollTop = scrol.scrollHeight;
         },
-        searchChat() {
-            filter()
-            console.log(filter)
-        }
+        // searchChat() {
+        //     filter()
+        //     console.log(filter)
+        // }
 
     },
     computed: {

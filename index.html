@@ -55,7 +55,7 @@
 
             </div>
             <div class="contacts">
-                <div class="contact" v-for="(contact, index) in filter" @click="changeChat(index)">
+                <div class="contact" v-for="(contact, index) in filter" @click="changeChat(contact)">
                     <div class="contact-img">
                         <!-- funzione img avatar -->
                         <img class="user-img" :src="createImg(contact.avatar)" alt="avatar_1">
