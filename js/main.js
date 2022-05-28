@@ -217,7 +217,7 @@ const app = new Vue({
     computed: {
         filter() {
             return this.contacts.filter((elm) =>
-                elm.name.toLowerCase().includes(this.filterName)
+                elm.name.toLowerCase().includes(this.filterName.toLowerCase())
             );
         }
     },
